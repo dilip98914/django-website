@@ -1,0 +1,26 @@
+<head>
+	{% load static %}	
+	<link rel="stylesheet"
+	 href="{% static 'tinymce/css/prism.css' %}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+
+	<nav>
+		<div class='nav-wrapper'>
+			<a href="/" class="brand-logo">Tutorials</a>
+			<ul id='nav-mobile'class='right hide-on-med-and-down'>
+				{% include 'main/includes/navbaritems.html' %}
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		{% include 'main/includes/messaging.html' %}
+
+		{% block content %}
+		{% endblock %}
+	</div>
+</body>
+<script  src="{% static 'tinymce/js/prism.js' %}"></script>
